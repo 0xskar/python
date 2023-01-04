@@ -15,12 +15,10 @@ print(player2, "rolls a", player2roll)
 print(player3, "rolls a", player3roll)
 
 if player1roll > player2roll > player3roll :
-    print("player1 wins with a", player1roll)
-
-if player2roll > player3roll > player1roll :
-    print("player2 wins with a", player2roll)
-
-if player3roll > player2roll > player1roll :
-    print("player3 wins with a", player3roll)
-
-
+    print(player1, "wins with a", player1roll)
+elif player2roll > player3roll > player1roll :
+    print(player2, "wins with a", player2roll)
+elif player3roll > player2roll > player1roll :
+    print(player3, "wins with a", player3roll)
+else :
+    print("looks like a tie")
