@@ -1,35 +1,22 @@
-# -*- coding: utf-8 -*-
-"""
-Spyder Editor
- 
-"""
 
-db1=["Kate", "Moss", "David"]
-db2=["Lee", "Steve"]
-db3=["Tony", "Lara"]
+db1=["Echo", "Tiger"]
+db2=["Mark", "Lisa"]
+db3=["Gary", "Alfa"]
 
 
-
-def addToDatabase(name): 
-   
+def addToDatabase(name):
     global db1
     global db2
     global db3
-    
-    db1=[name]
-    db2=[name]
-    db3=[name]
-    
 
-    
-    
-    
+    db1.append(name)
+    db2.append(name)
+    db3.append(name)
 
+addToDatabase("Errol")
+addToDatabase("Grant")
+addToDatabase("Shnorp")
 
-
-
-addToDatabase("John")
-addToDatabase("MrHamsho")
-print("Db 1 is: ", db1)
-print("Db 2 is: ", db2)
-print("Db 3 is: ", db3)
+print("DB 1 is:", db1)
+print("DB 2 is:", db2)
+print("DB 3 is:", db3)
