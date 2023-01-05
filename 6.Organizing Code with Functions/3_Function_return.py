@@ -5,7 +5,7 @@ Spyder Editor
 """
 
 def pwr2(num):
-    pw2= num*num
+    pw2 = num*num
     div = num/num
     return pw2, div
   
