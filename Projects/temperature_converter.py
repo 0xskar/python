@@ -37,7 +37,7 @@ if convert == conversion_options[2] or convert == conversion_options[3]:
         except ValueError:
             print("Not a valid number, try again...")
         
-    temperature_output = (temperature - 32) * 5 / 9    
+    temperature_output = (temperature - 32) * 5/9    
     print(temperature, " fahrenheit equals: ", temperature_output)
 
 # Celcius Conversion
