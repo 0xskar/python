@@ -3,6 +3,7 @@
 # Player chooses a number
 # Program tries to guess players number
 # 
+# 0xskar
 
 import random
 
