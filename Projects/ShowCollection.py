@@ -17,15 +17,13 @@ def MAIN_MENU_SELECT():
     while(input_pass == 0):
         try:
             menu_select = int(input("Please, select a option: "))
-            if menu_select <= int(7):
+            if menu_select <= menu_choices[-1]:
                 break
             else:
                 print("Not a valid menu option.")
         except ValueError:
             print("Not a valid menu option.")
         
-
-
 
 if connection.is_connected():
 
