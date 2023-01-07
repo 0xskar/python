@@ -67,6 +67,22 @@ def LIST_SHOWS():
     MAIN_MENU()
     input_pass = 0
     MAIN_MENU_SELECT()    
+
+def SEARCH_DB():        
+    global input_pass
+    cursor = connection.cursor()
+    query = 'SELECT * FROM tv_shows'
+    cursor.execute(query)
+    rows = cursor.fetchall()
+    print("***************************************************")
+    print("                    SEARCH DATABASE                ")
+    print("***************************************************")
+    for row in rows:
+        print(row)
+    cursor.close()
+    MAIN_MENU()
+    input_pass = 0
+    MAIN_MENU_SELECT()    
     
 def ADD_MOVIES():
     global input_pass
@@ -120,6 +136,50 @@ def ADD_SHOWS():
     input_pass = 0
     MAIN_MENU_SELECT()
 
+def DELETE_MOVIE():
+    global input_pass
+    cursor = connection.cursor(buffered=True)    
+    print("***************************************************")
+    print("                    DELETE MOVIE                   ")
+    print("***************************************************")
+    print("")
+    movie_ID = int(input("Enter the ID of movie: "))
+    select = "SELECT * FROM movies WHERE id = %s"
+    query = "DELETE FROM movies WHERE id = %s"
+    cursor.execute(select, (movie_ID,))  
+    row = cursor.fetchone()
+    cursor.execute(query, (movie_ID,))
+    connection.commit()
+    cursor.close()
+    print("***************************************************")
+    print("DELETED MOVIE FROM DATABASE")
+    print(row)
+    MAIN_MENU()
+    input_pass = 0
+    MAIN_MENU_SELECT()
+
+def DELETE_SHOW():
+    global input_pass
+    cursor = connection.cursor()    
+    print("***************************************************")
+    print("                  DELETE TV SHOW                   ")
+    print("***************************************************")
+    print("")
+    show_ID = int(input("Enter the ID of TV Show: "))
+    select = "SELECT * FROM tv_shows WHERE id = %s"
+    query = "DELETE FROM tv_shows WHERE id = %s"
+    cursor.execute(select, (show_ID,))  
+    row = cursor.fetchone()
+    cursor.execute(query, (show_ID,))
+    connection.commit()
+    cursor.close()
+    print("***************************************************")
+    print("DELETED TV SHOW FROM DATABASE")
+    print(row)
+    MAIN_MENU()
+    input_pass = 0
+    MAIN_MENU_SELECT()
+
 while connection.is_connected():
     print("***************************************************")
     print("             SHOW COLLECTION by 0xskar             ")
@@ -151,21 +211,15 @@ while connection.is_connected():
     while int(menu_select) == 2:
         LIST_SHOWS()
     while int(menu_select) == 3:
-        print("SEARCH DATABASE")
-        input_pass = 0
-        MAIN_MENU_SELECT()
+        SEARCH_DB()
     while int(menu_select) == 4:
         ADD_MOVIES()
     while int(menu_select) == 5:
         ADD_SHOWS()
     while int(menu_select) == 6:
-        print("Delete Movie")
-        input_pass = 0
-        MAIN_MENU_SELECT()
+        DELETE_MOVIE()
     while int(menu_select) == 7:
-        print("Delete TV Show")
-        input_pass = 0
-        MAIN_MENU_SELECT()
+        DELETE_SHOW()
     
 else:
     print("Couldn't connect to a Database.")
