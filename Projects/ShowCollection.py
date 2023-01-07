@@ -2,6 +2,20 @@
 #
 # A program that keeps a list of your favorite movies and TV shows, and allows you to add, remove, and search for items in the list.
 # 
+# Just need to modify the sql connections and create 1 database with 2 tables
+#
+# 2x tables named: movies AND tv_shows
+# 
+# +--------------+--------------+------+-----+---------+----------------+
+# | Field        | Type         | Null | Key | Default | Extra          |
+# +--------------+--------------+------+-----+---------+----------------+
+# | id           | int(11)      | NO   | PRI | NULL    | auto_increment |
+# | name         | varchar(255) | NO   |     | NULL    |                |
+# | genre        | varchar(50)  | NO   |     | NULL    |                |
+# | release_year | year(4)      | NO   |     | NULL    |                |
+# | rating       | decimal(3,1) | NO   |     | NULL    |                |
+# +--------------+--------------+------+-----+---------+----------------+
+
 
 import mysql.connector
 
