@@ -24,6 +24,7 @@ def MAIN_MENU():
     print("***************************************************")
 
 def MAIN_MENU_SELECT(): 
+    global input_pass
     input_pass = 0
     while(input_pass == 0):
         try:
@@ -65,7 +66,6 @@ def LIST_SHOWS():
         print(row)
     cursor.close()
     MAIN_MENU()
-    input_pass = 0
     MAIN_MENU_SELECT()    
 
 def SEARCH_DB():        
@@ -206,6 +206,11 @@ while connection.is_connected():
 
     MAIN_MENU_SELECT()
 
+    if input_pass == False:
+        print("break")
+        break
+
+while connection.is_connected():
     while int(menu_select) == 1:
         LIST_MOVIES()
     while int(menu_select) == 2:
