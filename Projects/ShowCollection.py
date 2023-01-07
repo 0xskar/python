@@ -10,7 +10,6 @@ connection = mysql.connector.connect(user='0xskar',
                                      host='192.168.0.34',
                                      database='ShowCollection')
 
-
 def MAIN_MENU():
     print("***************************************************")
     print("                     MAIN MENU                     ")
@@ -91,7 +90,6 @@ def ADD_MOVIES():
     print("Genre:" + movie_genre)
     print("Year:",movie_year)
     print("Rating:",movie_rating)
-    print("***************************************************")
     MAIN_MENU()
     input_pass = 0
     MAIN_MENU_SELECT()
@@ -118,11 +116,9 @@ def ADD_SHOWS():
     print("Genre:" + show_genre)
     print("Year:",show_year)
     print("Rating:",show_rating)
-    print("***************************************************")
     MAIN_MENU()
     input_pass = 0
     MAIN_MENU_SELECT()
-
 
 while connection.is_connected():
     print("***************************************************")
@@ -148,11 +144,7 @@ while connection.is_connected():
     for x in menu_options:
         menu_choices.append(int(x))
 
-    print(menu_choices)
-
     MAIN_MENU_SELECT()
-
-    print(menu_select)
 
     while int(menu_select) == 1:
         LIST_MOVIES()
