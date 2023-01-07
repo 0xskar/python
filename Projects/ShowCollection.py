@@ -12,7 +12,6 @@ connection = mysql.connector.connect(user='0xskar',
 
 
 def MAIN_MENU():
-    print("             SHOW COLLECTION by 0xskar             ")
     print("***************************************************")
     print("                     MAIN MENU                     ")
     print("***************************************************")
@@ -53,6 +52,22 @@ def LIST_MOVIES():
     MAIN_MENU()
     input_pass = 0
     MAIN_MENU_SELECT()
+
+def LIST_SHOWS():        
+    global input_pass
+    cursor = connection.cursor()
+    query = 'SELECT * FROM tv_shows'
+    cursor.execute(query)
+    rows = cursor.fetchall()
+    print("***************************************************")
+    print("                    LIST SHOWS                    ")
+    print("***************************************************")
+    for row in rows:
+        print(row)
+    cursor.close()
+    MAIN_MENU()
+    input_pass = 0
+    MAIN_MENU_SELECT()    
     
 def ADD_MOVIES():
     global input_pass
@@ -81,9 +96,36 @@ def ADD_MOVIES():
     input_pass = 0
     MAIN_MENU_SELECT()
 
+def ADD_SHOWS():
+    global input_pass
+    cursor = connection.cursor()    
+    print("***************************************************")
+    print("                    ADD TV SHOWS                   ")
+    print("***************************************************")
+    print("")
+    show_name = input("Enter the name of the TV Show: ")
+    show_genre = input("Enter the genre of the TV Show: ")
+    show_year = int(input("Enter the release year of the TV Show (ex: 1986): "))
+    show_rating = int(input("Rate the TV Show 1 out of 10: "))
+    query = "INSERT INTO tv_shows (name, genre, release_year, rating) VALUES (%s, %s, %s, %s)"
+    values = (show_name, show_genre, show_year, show_rating)
+    cursor.execute(query, values)
+    connection.commit()
+    cursor.close()
+    print("***************************************************")
+    print("ADDED TV SHOW TO DATABASE")
+    print("Name:" + show_name)
+    print("Genre:" + show_genre)
+    print("Year:",show_year)
+    print("Rating:",show_rating)
+    print("***************************************************")
+    MAIN_MENU()
+    input_pass = 0
+    MAIN_MENU_SELECT()
 
 
 while connection.is_connected():
+    print("***************************************************")
     print("             SHOW COLLECTION by 0xskar             ")
     print("***************************************************")
     print("                     MAIN MENU                     ")
@@ -115,9 +157,7 @@ while connection.is_connected():
     while int(menu_select) == 1:
         LIST_MOVIES()
     while int(menu_select) == 2:
-        print("LIST TV SHOWS")
-        input_pass = 0
-        MAIN_MENU_SELECT()
+        LIST_SHOWS()
     while int(menu_select) == 3:
         print("SEARCH DATABASE")
         input_pass = 0
@@ -125,9 +165,7 @@ while connection.is_connected():
     while int(menu_select) == 4:
         ADD_MOVIES()
     while int(menu_select) == 5:
-        print("Add a TV SHOW")
-        input_pass = 0
-        MAIN_MENU_SELECT()
+        ADD_SHOWS()
     while int(menu_select) == 6:
         print("Delete Movie")
         input_pass = 0
