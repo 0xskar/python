@@ -1,6 +1,6 @@
 # PYTHON
 
-A collection of my beginner scripts
+A collection of my python scripts
 
 Finished:
 - A program that generates a mad-libs story with user input.
