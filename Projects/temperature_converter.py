@@ -1,5 +1,5 @@
 # Temperature Converter
-########################
+## ## ## ## ## ## ## ## ## ## ## ## 
 #
 # Simple script for converting fahrenheit to celcius and vice versa.
 # 
@@ -11,7 +11,7 @@
 #
 # 0xskar
 #
-########################
+## ## ## ## ## ## ## ## ## ## ## ## 
 
 conversion_options = ["Celcius", "C", "Fahrenheit", "F"]
 
