@@ -164,13 +164,13 @@ def dice_game(player1, player1_money, player2, player2_money, replay):
             print(f'{player2.name} has won the game, you wagered {wager}. Now you have {main_character.money}.')
             print(f'----------------------------------')
             print(f'Play again? y/n')
-            replay = input('Enter Choice: the next function isnt working.')
-            while replay is not "y" and not "n":
+            while replay != "y":
                 try:
-                    print('Enter a correct input.')
-                    replay = input('Play again y/n: ')
-                except ValueError:
-                    print('ValueError.')
+                    replay = input('Enter Choice: the next function isnt working.')
+                except:
+                    ValueError
+
+
 
 
 # Sleep function
