@@ -4,6 +4,9 @@
 
 import random
 import time
+import curses
+from curses import wrapper
+
 
 # Character Stats  These range from about 3 to 20.
 #
@@ -72,20 +75,23 @@ fly = LevelOneEnemy("Fly")
 maiden = LevelOneEnemy("Maiden")
 
 
-
-
 # Mini Games
 #
 # Dice Game
 class DicePlayer:
-        def __init__(self, name: str):
-            self.name = name
-            self.score = 0
-            self.roll = 0
-            self.wager = 0
+    def __init__(self, name: str):
+        self.name = name
+        self.score = 0
+        self.roll = 0
+        self.wager = 0
 
 
 def dice_game(player1, player2, wager, replay):
+    player1 = DicePlayer(player1)
+    player2 = DicePlayer(player2)
+    round_counter = 0
+
+    print(f'How much do you wager? You have {main_character.money}')
 
     while True:
         try:
@@ -93,7 +99,6 @@ def dice_game(player1, player2, wager, replay):
             break
         except ValueError:
             print('Enter a correct number.')
-
 
     while wager > main_character.money:
         print(f'You dont have enough, try less.')
@@ -103,11 +108,6 @@ def dice_game(player1, player2, wager, replay):
                 break
             except ValueError:
                 print('Enter a correct number.')
-            
-
-    player1 = DicePlayer(player1)
-    player2 = DicePlayer(player2)
-    round_counter = 0
 
     print(f'Dice game.')
     print(f'Wagering {wager}.')
@@ -132,7 +132,7 @@ def dice_game(player1, player2, wager, replay):
             print(f'{player2.name} wins, has {player2.score}.')
         else:
             print(f'Tis a tie')
-        round_counter+=1
+        round_counter += 1
     if player1.score == 2:
         print(f'----------------------------------')
         print(f'You won the game! You wagered {wager}.')
@@ -143,7 +143,7 @@ def dice_game(player1, player2, wager, replay):
         replay = input('Enter Choice: ')
         if replay == "y":
             dice_game(player1.name, player2.name, main_character.money, replay)
-        
+
     elif player2.score == 2:
         print(f'----------------------------------')
         main_character.money = main_character.money - wager
@@ -151,20 +151,21 @@ def dice_game(player1, player2, wager, replay):
         print(f'----------------------------------')
         print(f'Play again? y/n')
         replay = input('Enter Choice: ')
-        if replay == "y":
-            dice_game(player1.name, player2.name, main_character.money, replay)
+        while replay is not "y":
+            try:
+                print('Enter a correct input')
+                replay = input('Enter Choice: ')
+            except :
+                replay = input('Enter Choice: ')
+                dice_game(player1.name, player2.name, main_character.money, replay)
+                break
 
-
-
-
-
-
-    
-
+        
 
 # Sleep function
 def sleep(sec):
     time.sleep(sec)
+
 
 # Game Scenes
 def scene_boat():
@@ -186,15 +187,11 @@ def scene_boat():
     while scene == "galley":
         print(f'Meeting {companion_one.name} in the Galley. The Barkeep is there as well.')
         print(f'They challenge you to round of dice, you love dice so accept it with no delay.')
-        print(f'How much do you wager? You have {main_character.money}')
-
 
         # dice game
         dice_game(main_character.name, companion_one.name, main_character.money, 0)
 
-
-
-        #calculate if lost a lot of the wager to insult, and if not to congratulate
+        # calculate if lost a lot of the wager to insult, and if not to congratulate
         print(
             f'"What a great way to pass the time there {main_character.name}. Says {companion_one.name}. '
             f'You big dog you just won that game and should have {main_character.money} now!')
@@ -208,6 +205,7 @@ def scene_boat():
 
     # fighting
     exit("Game Over")
+
 
 # checks if the code is the main program or imported. it will run if the code is imported in as a module
 if __name__ == '__main__':
