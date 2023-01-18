@@ -101,23 +101,65 @@ class Player2:
 def dice_game(player1_name, player1_money, player2_name, player2_money, rounds):
     player1 = Player1(player1_name)
     player2 = Player2(player2_name)
-    window_dice_game = curses.newwin(0,0,0,55)
-    window_dice_game.clear()
+
+    window_dice_game_title = curses.newwin(0,0,0,55)
+    window_dice_game_body = curses.newwin(0,32, 4, 55)
+
+    curses.init_pair(2, curses.COLOR_BLUE, curses.COLOR_BLACK)
+    BLUE_AND_BLACK = curses.color_pair(2)
+    window_dice_game_title.clear()
+    window_dice_game_title.addstr(0, 0, f'--------------------------------')
+    window_dice_game_title.addstr(1, 0, f'+              Dice            +', BLUE_AND_BLACK)
+    window_dice_game_title.addstr(2, 0, f'--------------------------------')
+    window_dice_game_title.refresh()
+
+    window_dice_game_body.clear()
+    window_dice_game_body.addstr(0, 0, f'{player1.name}, {player1.money}. {player2.name}, {player2.money}.')
+    window_dice_game_body.addstr(2, 0, f'How much do you wager?')
+    window_dice_game_body.clear
+    window_dice_game_body.refresh()
+    window_dice_game_body.getch()
+
+    dice_round = 0
+
     for i in range(rounds):
-        i = i + 1
-        window_dice_game.addstr(0, 0, f'--------------------------------')
-        window_dice_game.addstr(1, 0, f'+              Dice            +')
-        window_dice_game.addstr(2, 0, f'--------------------------------')
-        window_dice_game.addstr(3, 0, f'{player1_name}, {player1_money}. {player2_name}, {player2_money}. Round {rounds}')
+        dice_round = dice_round + 1
+        window_dice_game_body.clear()
+        window_dice_game_body.addstr(0, 0, f'Round {dice_round}')
         player1.roll = random.randint(1, 10)
-        window_dice_game.addstr(4, 0, f'{player1.name} rolls a {player1.roll}.')
+        window_dice_game_body.addstr(1, 0, f'{player1.name} rolls a {player1.roll}.')
         player2.roll = random.randint(1, 10)
-        window_dice_game.addstr(5, 0, f'{player2.name} rolls a {player2.roll}.')
-        window_dice_game.addstr(15, 0, f'--== Press any key to roll ==--')
-        window_dice_game.refresh()
-        window_dice_game.getch()
-        rounds = rounds - 1
-        
+        window_dice_game_body.addstr(2, 0, f'{player2.name} rolls a {player2.roll}')
+        if player1.roll > player2.roll:
+            window_dice_game_body.addstr(3, 0, f'{player1.name} wins with {player1.roll}')
+            window_dice_game_body.refresh()
+            window_dice_game_body.getch()
+        elif player1.roll < player2.roll:
+            window_dice_game_body.addstr(4, 0, f'{player2.name} wins with {player2.roll}')
+        else:
+            window_dice_game_body.addstr(0, 0, f'It\'s a tie')
+            dice_tie = 1
+            while dice_tie == 1:
+                try:
+                    window_dice_game_body.addstr(0, 0, f'Round {i + 1}')
+                    player1.roll = random.randint(1, 10)
+                    window_dice_game_body.addstr(1, 0, f'{player1.name} rolls a {player1.roll}.')
+                    player2.roll = random.randint(1, 10)
+                    window_dice_game_body.addstr(2, 0, f'{player2.name} rolls a {player2.roll}')
+                    if player1.roll > player2.roll:
+                        window_dice_game_body.addstr(3, 0, f'{player1.name} wins with {player1.roll}')
+                        dice_tie = 0
+                        time.sleep(1)
+                    if player1.roll < player2.roll:
+                        window_dice_game_body.addstr(3, 0, f'{player2.name} wins with {player2.roll}')
+                        dice_tie = 0
+                        time.sleep(1)
+                    elif player1.roll == player2.roll:
+                        window_dice_game_body.addstr(0, 0, f'It\'s a tie')
+                except dice_tie == 0:
+                    break
+    
+     
     
 
 
@@ -165,15 +207,17 @@ def scene_boat():
 
     
     # dice game
-    dice_game(main_character.name, main_character.money, companion_one.name, companion_one.money, 3)
+    rounds = 3
+    dice_game(main_character.name, main_character.money, companion_one.name, companion_one.money, rounds)
 
     # calculate if lost a lot of the wager to insult, and if not to congratulate
-    print(
-        f'"What a great way to pass the time there {main_character.name}. Says {companion_one.name}. '
-        f'You big dog you just won that game and should have {main_character.money} now!')
-    print(
-        f'You two decide to get ready to depart the galley when the cook, who always gave you a bad feeling '
-        f'comes at you with a cleaver!')
+    window_boat_scene.clear()
+    window_boat_scene.addstr(0, 0, f'"What a great way to pass the time there {main_character.name}. Says {companion_one.name}. '
+                                   f'You big dog you just won that game and should have {main_character.money} now!'
+                                   f'You two decide to get ready to depart the galley when the cook, who always gave you a bad feeling '
+                                   f'comes at you with a cleaver!')
+    window_boat_scene.refresh()
+    window_boat_scene.getch()
 
 
 # main function. curses and colors and other variables
@@ -184,5 +228,5 @@ def main(stdscr):
     scene_boat()
     
     
-wrapper(main)
+curses.wrapper(main)
 
