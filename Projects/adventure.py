@@ -7,6 +7,7 @@ import time
 import curses
 from curses import wrapper
 
+
 # Curses Module
 # 
 #           clear screen:       stdscr.clear()
@@ -78,8 +79,6 @@ class LevelOneEnemy:
 barkeep = LevelOneEnemy("Barkeep")
 
 
-
-
 # Mini Games
 #
 # Dice Game
@@ -97,13 +96,12 @@ class Player2:
         self.money = 0
 
 
-
 def dice_game(player1_name, player1_money, player2_name, player2_money, rounds):
     player1 = Player1(player1_name)
     player2 = Player2(player2_name)
 
-    window_dice_game_title = curses.newwin(0,0,0,55)
-    window_dice_game_body = curses.newwin(0,32, 4, 55)
+    window_dice_game_title = curses.newwin(0, 0, 0, 55)
+    window_dice_game_body = curses.newwin(0, 32, 4, 55)
 
     curses.init_pair(2, curses.COLOR_BLUE, curses.COLOR_BLACK)
     BLUE_AND_BLACK = curses.color_pair(2)
@@ -158,10 +156,6 @@ def dice_game(player1_name, player1_money, player2_name, player2_money, rounds):
                         window_dice_game_body.addstr(0, 0, f'It\'s a tie')
                 except dice_tie == 0:
                     break
-    
-     
-    
-
 
 
 # Sleep function
@@ -177,7 +171,6 @@ def window_title(RED_AND_BLACK):
     window_title_location.addstr(1, 0, f'+           Star of Dawn - Introduction          +', RED_AND_BLACK)
     window_title_location.addstr(2, 0, f'--------------------------------------------------')
     window_title_location.refresh()
-    
 
 
 # Game Scenes
@@ -199,23 +192,23 @@ def scene_boat():
 
     # meeting companion one in the galley
     window_boat_scene.clear()
-    window_boat_scene.addstr(0,0, f'Meeting {companion_one.name} in the Galley. The Barkeep is there as well.'
-                                  f'They challenge you to round of dice, you love dice so accept it with no delay.')
+    window_boat_scene.addstr(0, 0, f'Meeting {companion_one.name} in the Galley. The Barkeep is there as well.'
+                                   f'They challenge you to round of dice, you love dice so accept it with no delay.')
     window_boat_scene.addstr(11, 0, f'       --== Press Any Key to Continue ==--')
     window_boat_scene.refresh()
     window_boat_scene.getch()
 
-    
     # dice game
     rounds = 3
     dice_game(main_character.name, main_character.money, companion_one.name, companion_one.money, rounds)
 
     # calculate if lost a lot of the wager to insult, and if not to congratulate
     window_boat_scene.clear()
-    window_boat_scene.addstr(0, 0, f'"What a great way to pass the time there {main_character.name}. Says {companion_one.name}. '
-                                   f'You big dog you just won that game and should have {main_character.money} now!'
-                                   f'You two decide to get ready to depart the galley when the cook, who always gave you a bad feeling '
-                                   f'comes at you with a cleaver!')
+    window_boat_scene.addstr(0, 0,
+                             f'"What a great way to pass the time there {main_character.name}. Says {companion_one.name}. '
+                             f'You big dog you just won that game and should have {main_character.money} now!'
+                             f'You two decide to get ready to depart the galley when the cook, who always gave you a '
+                             f'bad feeling comes at you with a cleaver!')
     window_boat_scene.refresh()
     window_boat_scene.getch()
 
@@ -226,7 +219,7 @@ def main(stdscr):
     RED_AND_BLACK = curses.color_pair(1)
     window_title(RED_AND_BLACK)
     scene_boat()
-    
-    
+
+
 curses.wrapper(main)
 
