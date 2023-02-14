@@ -36,3 +36,10 @@ feature = np.arange(6, 21)
 print(feature)
 label = (3 * feature) + 4
 print(label)
+
+#task 2 problemset
+
+noise = np.random.random([15] * 4) - 2
+print(noise)
+label = label + noise
+print(label)
