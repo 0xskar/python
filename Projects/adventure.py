@@ -11,15 +11,16 @@ from curses.textpad import Textbox, rectangle
 
 # Curses Module Commands Reference
 #
-#   curses.newwin(a, b, c, d)   - creates new window                        a = window cell height
-#   curses.clear()              - clears screen                             b = window cell width
+#   curses.newwin(a, b, c, d)   - creates new window                        a = window cell height from top
+#   curses.clear()              - clears screen                             b = window cell width from le
 #   curses.refresh()            - refreshes screen                          c = cells from the top
 #   curses.getch()              - waits for and gets a user input           d = cells from the right
-#   rectangle(curses, 0, 0, 3, 49)  - draws a rectangle
 #
-#   rectangle(window_dice_game, 0, 55, 3, 37)
-
-
+#   rectangle(curses, a, b, c, d)   a = Start (Cells from Top)
+#                                   b = Start (Cells from Left)
+#                                   c = Rectangle Height
+#                                   d = Rectangle Width
+#
 # Character Stats  These range from about 3 to 20.
 #
 # "Physical" statistics
@@ -113,8 +114,8 @@ def window_title(RED_AND_BLACK):
 def dice_game(player1_name, player1_money, player2_name, player2_money, rounds):
     player1 = Player1(player1_name)
     player2 = Player2(player2_name)
-    player1.money = main_character.money
 
+    player1.money = main_character.money
     if player2.name == companion_one.name:
         player2.money = companion_one.money
 
@@ -128,7 +129,7 @@ def dice_game(player1_name, player1_money, player2_name, player2_money, rounds):
     BLUE_AND_BLACK = curses.color_pair(2)
     GREEN_AND_BLACK = curses.color_pair(3)
 
-    # trying to get rectangle to draw
+    # Title Rectangle and Window
     window_dice_game_title.clear()
     rectangle(window_dice_game_title, 0, 0, 3, 36)
     window_dice_game_title.addstr(1, 14, f'+ Dice +', BLUE_AND_BLACK)
@@ -137,14 +138,25 @@ def dice_game(player1_name, player1_money, player2_name, player2_money, rounds):
     window_dice_game_body.clear()
     window_dice_game_body.addstr(0, 0, f'How much do you wager?')
     window_dice_game_body.addstr(2, 0, f'You have {player1.money}, and {player2.name} has {player2.money}.')
-
-    # wager = window_dice_game_body.getkey()
-    # window_dice_game_body.addstr(4, 0, f'Enter wager: {wager}')
     window_dice_game_body.refresh()
     window_dice_game_body.getch()
 
-    dice_round = 0
+    # Wager Rectangle and window
+    while wager is not int:
+        try:
+            window_dice_game_wager = curses.newwin(0, 20, 14, 55)
+            window_dice_game_wager.addstr(0, 0,'Enter a number: ')
+            wager_box = Textbox(window_dice_game_wager)
+            window_dice_game_wager.refresh()
+            wager_box.edit()
+            wager = int(wager_box.gather().strip())
+            window_dice_game_wager.getch()
 
+            dice_round = 0
+            break        
+        except :
+            ValueError
+    
     for i in range(rounds):
         dice_tie = 0
         dice_round += 1
@@ -154,6 +166,12 @@ def dice_game(player1_name, player1_money, player2_name, player2_money, rounds):
         window_dice_game_body.addstr(2, 0, f'{player1.name} rolls a {player1.roll}.')
         player2.roll = random.randint(1, 10)
         window_dice_game_body.addstr(3, 0, f'{player2.name} rolls a {player2.roll}.')
+
+        #Wager window
+        window_dice_game_wager.clear
+        window_dice_game_wager.refresh
+        window_dice_game_wager.addstr(0,0, f'{player1.name} wagers {wager}.')
+
         if player1.roll > player2.roll:
             window_dice_game_body.addstr(0, 30, f'WIN!!!', GREEN_AND_BLACK)
             window_dice_game_body.addstr(5, 0, f'{player1.name} wins with {player1.roll}')
@@ -179,9 +197,21 @@ def dice_game(player1_name, player1_money, player2_name, player2_money, rounds):
             window_dice_game_body.getch()
 
     if player1.score > player2.score:
-        print('Player 1 wins the game.')
+        window_dice_game_body.clear()
+        window_dice_game_body.addstr(5, 0, f'Player 1 wins the game.')
+        window_dice_game_body.refresh()
+        window_dice_game_wager.clear
+        window_dice_game_wager.addstr(0,0, f'{player1.name} wins {wager}.')
+        window_dice_game_wager.refresh
+        window_dice_game_wager.getch()
     elif player1.score < player2.score:
-        print('Player 1 loses the game.')
+        window_dice_game_body.clear()
+        window_dice_game_body.addstr(5, 0, f'Player 1 loses the game.')
+        window_dice_game_body.refresh()
+        window_dice_game_wager.clear()
+        window_dice_game_wager.addstr(0,0, f'{player1.name} loses {wager}.')
+        window_dice_game_wager.refresh()
+        window_dice_game_wager.getch()
 
 
 # Sleep function
