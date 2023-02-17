@@ -14,3 +14,4 @@ Finished:
 - fizzbuzz.py - fizzbuzz game (100 days of python)
 - highestscore.py - picks the highest score from a list (100 days of python)
 - passwordgenerator.py - Creates a random password from specified lengths (100 days of python)
+- hangman - main.py - hangman game (100 days of python day 7)
