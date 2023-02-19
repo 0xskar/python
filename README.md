@@ -16,3 +16,4 @@ Finished:
 - passwordgenerator.py - Creates a random password from specified lengths (100 days of python)
 - hangman - main.py - hangman game (100 days of python day 7)
 - caesar cipher encoder and decoder (100 days of python day 8)
+- silent auction program (100 days of python day 9)
