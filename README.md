@@ -17,3 +17,4 @@ Finished:
 - hangman - main.py - hangman game (100 days of python day 7)
 - caesar cipher encoder and decoder (100 days of python day 8)
 - silent auction program (100 days of python day 9)
+- calculator (100 days of python day 10)
