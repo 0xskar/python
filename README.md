@@ -18,3 +18,4 @@ Finished:
 - caesar cipher encoder and decoder (100 days of python day 8)
 - silent auction program (100 days of python day 9)
 - calculator (100 days of python day 10)
+- scuffed blackjack (100 days of python day 11)
