@@ -17,6 +17,7 @@ Finished:
 - hangman - main.py - hangman game (100 days of python day 7)
 - caesar cipher encoder and decoder (100 days of python day 8)
 - silent auction program (100 days of python day 9)
-- calculator (100 days of python day 10)
-- blackjack (100 days of python day 11)
-- number guesser (100 days of python day 12)
+- calculator (100 days of python day 10) - calculator (simple)
+- blackjack (100 days of python day 11) - blackjack
+- number guesser (100 days of python day 12) - guess a number between 1 and 100 in different definied rounds
+- Higher or lower game (100 days of python day 14) - guess if the instagram account has higher or lower followers than another
