@@ -1,6 +1,6 @@
 # PYTHON
 
-A collection of my python scripts
+A collection of my python scripts from easiast to hardest
 
 Finished:
 - madlib.py A program that generates a mad-libs story with user input.
