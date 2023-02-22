@@ -2,7 +2,6 @@
 
 A collection of my python scripts from easiast to hardest
 
-Finished:
 - madlib.py A program that generates a mad-libs story with user input.
 - temperature_converter.py - A program that converts temperatures from Fahrenheit to Celsius and vice versa.
 - rockpaperscissors.py - A program that plays a simple game of rock-paper-scissors against the computer.
