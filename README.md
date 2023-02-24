@@ -22,4 +22,6 @@ A collection of my python scripts from easiast to hardest
 - Higher or lower game (100 days of python day 14) - guess if the instagram account has higher or lower followers than another
 - Coffee machine (100 days of python day 15) - a coffee machine that compares the resouces it has available with different menu options and then takes payment to make a drink if the resources are available. also has a report function to display available resources and can turn off for maintenance.
 - Coffee machine v2.0 (100 days of python day 16) - same function as before but using OOP to clean up code and improve functionality
-- Quiz program - (100 days day 17) - OOP quiz program that can take many forms of question data and run a quiz against it.
+- Quiz program - (100 days 17) - OOP quiz program that can take many forms of question data and run a quiz against it.
+- Random Walk - (100 days 18) - random walk in turtle
+- Damien Hurst Dots - (100 days 18) - A program thaat will generate a window full of dots for the specified amount of dots and size. 
