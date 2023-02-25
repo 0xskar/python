@@ -1,6 +1,6 @@
 # PYTHON
 
-A collection of my python scripts from easiast to hardest
+My collection of my python scripts from easiast to hardest (or oldest to newest)
 
 - madlib.py A program that generates a mad-libs story with user input.
 - temperature_converter.py - A program that converts temperatures from Fahrenheit to Celsius and vice versa.
@@ -25,3 +25,4 @@ A collection of my python scripts from easiast to hardest
 - Quiz program - (100 days 17) - OOP quiz program that can take many forms of question data and run a quiz against it.
 - Random Walk - (100 days 18) - random walk in turtle
 - Damien Hurst Dots - (100 days 18) - A program thaat will generate a window full of dots for the specified amount of dots and size. 
+- Turtle Racer (100 days day 19) - Creates 6 turtles, bet on a turtle, see if your turtle is the winner. Uses OOP to assign 6 turtles different specified colors then while playing assigned each turtle random speeds while playing. End's when a turtle reaches specific coordinate.
