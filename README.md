@@ -27,3 +27,4 @@ My collection of my python scripts from easiast to hardest (or oldest to newest)
 - Damien Hurst Dots - (100 days 18) - A program thaat will generate a window full of dots for the specified amount of dots and size. 
 - Turtle Racer (100 days day 19) - Creates 6 turtles, bet on a turtle, see if your turtle is the winner. Uses OOP to assign 6 turtles different specified colors then while playing assigned each turtle random speeds while playing. End's when a turtle reaches specific coordinate.
 - Snake Game (100 days 21) - Snake game with turtle module
+- Pong (100 Days 22) - I made pong. It's a 50 year old game and it was hard.
