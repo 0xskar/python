@@ -29,3 +29,5 @@ My collection of my python scripts from easiast to hardest (or oldest to newest)
 - Snake Game (100 days 21) - Snake game with turtle module
 - Pong (100 Days 22) - I made pong. It's a 50 year old game and it was hard.
 - Frogger but Turtle (100 days day 23) - Frogger game with turtle module
+- Snake with highscores (100 days day 24) - Snake game but reads and writes to a datafile that contains high scores.
+- Mail Maker (100 days day 24) - Takes a custom letter file and a name list file and combines them to create custom mail messages.
