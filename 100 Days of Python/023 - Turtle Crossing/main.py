@@ -1,16 +1,38 @@
-# This is a sample Python script.
+import time
+from turtle import Screen
+from player import Player
+from car_manager import CarManager
+from scoreboard import Scoreboard
 
-# Press Shift+F10 to execute it or replace it with your code.
-# Press Double Shift to search everywhere for classes, files, tool windows, actions, and settings.
+screen = Screen()
+screen.setup(width=600, height=600)
+screen.tracer(0)
+screen.listen()
+player = Player()
+screen.onkey(fun=player.up, key="Up")
+car = CarManager()
+scoreboard = Scoreboard()
+
+starting_speed = 0.1
+
+game_is_on = True
+while game_is_on:
+    time.sleep(starting_speed)
+    screen.update()
+
+    car.create_car()
+    car.car_moving()
+
+    for c in car.cars:
+        if c.distance(player) < 20:
+            scoreboard.game_over()
+            game_is_on = False
+
+    if player.ycor() > 280:
+        scoreboard.next_level()
+        player.next_level()
+        starting_speed -= 0.02
 
 
-def print_hi(name):
-    # Use a breakpoint in the code line below to debug your script.
-    print(f'Hi, {name}')  # Press Ctrl+F8 to toggle the breakpoint.
 
-
-# Press the green button in the gutter to run the script.
-if __name__ == '__main__':
-    print_hi('PyCharm')
-
-# See PyCharm help at https://www.jetbrains.com/help/pycharm/
+screen.exitonclick()
