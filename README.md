@@ -2,6 +2,7 @@
 
 My collection of my python scripts from newest to oldest
 
+- NATO Phonetic Name Translator - Goes through a pandas dataframe containing NATO phonetic names, and using list comprehension cycles through the name given and outputs the NATO phonetics for any given name.
 - US States Game - Guess the correct states in the USA. This uses pandas datafram to parse through the list of states then outputs a textfile for the states you have missed.
 - Mail Maker (100 days day 24) - Takes a custom letter file and a name list file and combines them to create custom mail messages.
 - Snake with highscores (100 days day 24) - Snake game but reads and writes to a datafile that contains high scores.
