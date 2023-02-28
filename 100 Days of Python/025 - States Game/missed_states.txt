@@ -1,48 +1,24 @@
 
-Nevada
-Massachusetts
-Florida
-Maryland
-Missouri
-Colorado
-Mississippi
 West Virginia
-Alaska
-Kansas
-Connecticut
-Michigan
-North Dakota
-Louisiana
-Ohio
-Indiana
-South Carolina
-Idaho
-Rhode Island
-Minnesota
-Delaware
-Virginia
-Montana
-South Dakota
-Washington
-Oregon
-Tennessee
-Arkansas
-Hawaii
-Vermont
-New Hampshire
-Wyoming
-Georgia
-Pennsylvania
-Illinois
-Maine
 Kentucky
-Nebraska
-New Jersey
-North Carolina
+Kansas
+Arkansas
+Connecticut
+Delaware
+Minnesota
+Indiana
+Maryland
+Maine
+Alabama
+Georgia
 Wisconsin
-California
-New Mexico
-New York
-Oklahoma
-Texas
 Iowa
+Utah
+Oklahoma
+South Carolina
+Virginia
+Vermont
+New York
+Massachusetts
+North Carolina
+Pennsylvania
