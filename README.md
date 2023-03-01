@@ -2,6 +2,7 @@
 
 My collection of my python scripts from newest to oldest
 
+- Pomodore app (100 days 28) - Breaks down work sessions into the pomodoro technique to allow better learning or better workflow. Tracks the number of work sessions and breaks.
 - Kilometers to miles converter in tkinter (100 days 27) args and kwargs
 - NATO Phonetic Name Translator (100 days 26) - Goes through a pandas dataframe containing NATO phonetic names, and using list comprehension cycles through the name given and outputs the NATO phonetics for any given name.
 - US States Game (100 days 25- Guess the correct states in the USA. This uses pandas datafram to parse through the list of states then outputs a textfile for the states you have missed.
