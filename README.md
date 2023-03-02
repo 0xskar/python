@@ -2,6 +2,7 @@
 
 My collection of my python scripts from newest to oldest
 
+- New Lastpass (100 days 29) - Password Manager GUI. Generates a secure password, and saves that information along with the website and username to a datafile stored locally.
 - Pomodore app (100 days 28) - Breaks down work sessions into the pomodoro technique to allow better learning or better workflow. Tracks the number of work sessions and breaks.
 - Kilometers to miles converter in tkinter (100 days 27) args and kwargs
 - NATO Phonetic Name Translator (100 days 26) - Goes through a pandas dataframe containing NATO phonetic names, and using list comprehension cycles through the name given and outputs the NATO phonetics for any given name.
