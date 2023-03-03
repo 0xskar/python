@@ -2,6 +2,7 @@
 
 My collection of my python scripts from newest to oldest
 
+- Flashcard Project (100 days 31 capstone project) - Flashcard project that will take ANY language that is compatible with google translate and create flashcards. This will go through the list of flashcards and then create a list of words you need to work on depending on the users answer.
 - New Lastpass 2.0 (100 days 30) - Password manager 2.0. Detects if JSON file exists and if it doesn't creates it. Can also search for previously generated passwords that have been saved to the JSON file.
 - New Lastpass (100 days 29) - Password Manager GUI. Generates a secure password, and saves that information along with the website and username to a datafile stored locally.
 - Pomodore app (100 days 28) - Breaks down work sessions into the pomodoro technique to allow better learning or better workflow. Tracks the number of work sessions and breaks.
