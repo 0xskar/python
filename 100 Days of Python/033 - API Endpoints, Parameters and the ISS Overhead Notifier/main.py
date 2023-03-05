@@ -1,8 +1,7 @@
 import time
 import requests
 import math
-from datetime import datetime
-from functions import is_close, sendmail
+from functions import is_close, sendmail, is_dark
 
 
 # SMTP EMAIL STUFF currently configured to use smtp.sendgrid.net, 587. All other SMTP servers now
@@ -30,26 +29,7 @@ while running:
     distance = distance * 1.609344
     distance = math.trunc(distance)
 
-    # PARAMETERS to pass to find out when the sun is down
-    parameters = {
-        "lat": latitude,
-        "lng": longitude,
-        "formatted": 0,
-    }
-
-    response = requests.get("https://api.sunrise-sunset.org/json", params=parameters)
-    response.raise_for_status()
-    data = response.json()
-    sunrise = int(data["results"]["sunrise"].split("T")[1].split(":")[0])
-    sunset = int(data["results"]["sunset"].split("T")[1].split(":")[0])
-
-    time_now = datetime.now()
-    print(f"Current Hour: {time_now.hour}")
-    print(f"Sunrise: {sunrise}\nSunset: {sunset}")
-
-    print(f"Your current Kilometers from the ISS: {distance}.")
-
-    if is_close(YOUR_COORDINATES, iss_coordinates) and time_now.hour > sunset or time_now.hour < sunrise:
+    if is_dark(latitude, longitude) and is_close(YOUR_COORDINATES, iss_coordinates):
         print("ISS IS CLOSE, and it should be dark, look up.")
         sendmail(distance, YOUR_EMAIL, YOUR_PASSWORD)
     else:
