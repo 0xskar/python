@@ -2,6 +2,7 @@
 
 Collection of my python scripts from newest to oldest
 
+- Kanye Says Actual Motivation Things - Uses tkinter, request, and random, to read motivation quote API so Kanye says actually useful things rather than whatever he is going on about.
 - Birthday Reminder  (100 days 32) - This program is using Pandas, smtplib, os, datetime, to access a supplied list of people and dates, and if hosted online (via pythonanywhere) you can use this python program to have it send you an email if someones birthday comes up today.
 - Monday Motivational Emailer (100 days 32) - Picks a random motivational quote from a supplied .csv then emails this to you using your configured SMTP. If hosted online this will email you every Monday.
 - Flashcard Project (100 days 31 capstone project) - Flashcard project that will take ANY language that is compatible with google translate (you can create a flashcard list via google sheets using =GOOGLETRANSLATE()) and create flashcards. This will go through the list of flashcards and then create a list of words you need to work on depending on the users answer.
