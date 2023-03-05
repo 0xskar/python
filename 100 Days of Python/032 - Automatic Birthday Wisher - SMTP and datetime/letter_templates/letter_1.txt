@@ -1,0 +1,7 @@
+Hey Boss,
+
+It is [NAME]'s birthday today. Text them?
+
+Send from your automated python birthday reminder.
+
+Errol

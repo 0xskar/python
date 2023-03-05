@@ -1,0 +1,7 @@
+Hey Man,
+
+It is [NAME]'s birthday today. Wish them a happy bday.
+
+Send from your automated python birthday reminder.
+
+Errol
