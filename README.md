@@ -2,6 +2,8 @@
 
 Collection of my python scripts from newest to oldest
 
+
+- ISS Tracker and EMAILer - Every 60 seconds this program tracks the ISS using their API, also tracks sunset/sunrise using supplied latitude/longitude. Performs distance calculation from the ISS, will send out an email telling you to check outside when the ISS is closer than 5 degrees lat/long, and the sun is down.
 - Kanye Says Actual Motivation Things - Uses tkinter, request, and random, to read motivation quote API so Kanye says actually useful things rather than whatever he is going on about.
 - Birthday Reminder  (100 days 32) - This program is using Pandas, smtplib, os, datetime, to access a supplied list of people and dates, and if hosted online (via pythonanywhere) you can use this python program to have it send you an email if someones birthday comes up today.
 - Monday Motivational Emailer (100 days 32) - Picks a random motivational quote from a supplied .csv then emails this to you using your configured SMTP. If hosted online this will email you every Monday.
