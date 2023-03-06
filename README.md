@@ -2,6 +2,10 @@
 
 Collection of my python scripts from newest to oldest
 
+### Quizzler (100 days 34)
+
+Upgraded the old quiz CLI to a tkinter quiz app that uses API requests to get a series of questions.
+
 ### ISS Tracker and EMAILer (100 days 33)
 
 Every 60 seconds this program tracks the ISS using their API, also tracks sunset/sunrise using supplied latitude/longitude. Performs distance calculation from the ISS, will send out an email telling you to check outside when the ISS is closer than 5 degrees lat/long, and the sun is down.
