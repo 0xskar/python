@@ -2,6 +2,10 @@
 
 Collection of my python scripts from newest to oldest
 
+### Weather it will rain/snow (100 days 34)
+
+Program checks openweather API then checks if the weather ID is less then 800 for the next 24 hours it will fire off an SMS alerting you the fact.
+
 ### Quizzler (100 days 34)
 
 Upgraded the old quiz CLI to a tkinter quiz app that uses API requests to get a series of questions.
