@@ -2,7 +2,7 @@ import requests
 
 
 open_weather_API = "https://api.openweathermap.org/data/2.5/forecast"
-api_key = "79b94e44bff3061fe02cbe151cf0c8fc"
+api_key = ""
 
 weather_params = {
     "id": 5989045,
