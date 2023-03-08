@@ -2,7 +2,11 @@
 
 Collection of my python scripts from newest to oldest
 
-### Weather it will rain/snow (100 days 34)
+### Stock Trader News Alert (100 days 36)
+
+Uses alphavantage and newsapi.org APIs to check a stock. Calculates if stock has fallen or risen more than 5% between two closes then can be setup to send you a SMS or email with 3 of the latest relevant news stories to the stock ticker.
+
+### Weather it will rain/snow (100 days 35)
 
 Program checks openweather API then checks if the weather ID is less then 800 for the next 24 hours it will fire off an SMS alerting you the fact.
 
