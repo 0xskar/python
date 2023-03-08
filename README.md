@@ -2,6 +2,10 @@
 
 Collection of my python scripts from newest to oldest
 
+### Sheety/OpenAI Workout Tracker (100 days 38)
+
+Uses Nutritionx to generate a json response with a user inputted sentence (EG: "I went for a walk for 2 kilometers it took 15 minutes"), then uses nutritionx openAI connection to calculate calories burned. With this json information it updates your sheety connected google sheet for easy tracking.
+
 ### Yoga Tracker (100 days 37)
 
 Simple script that needs to be polished. Using Pixe.la API and json to post and put and create graphs to track habits.
