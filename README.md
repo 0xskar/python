@@ -2,6 +2,10 @@
 
 Collection of my python scripts from newest to oldest
 
+### Yoga Tracker (100 days 37)
+
+Simple script that needs to be polished. Using Pixe.la API and json to post and put and create graphs to track habits.
+
 ### Stock Trader News Alert (100 days 36)
 
 Uses alphavantage and newsapi.org APIs to check a stock. Calculates if stock has fallen or risen more than 5% between two closes then can be setup to send you a SMS or email with 3 of the latest relevant news stories to the stock ticker.
