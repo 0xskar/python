@@ -1,10 +1,19 @@
 import os
 
+# YOUR LOCAL AIRPORT OR WHERE FLYING FROM
+LOCAL_IATACODE = "YLW"
+
 # REQUIRED APIs
-SHEETY_BEARER_TOKEN = os.environ["SHEETY_BEARER_TOKEN"]
-SHEETY_USERID = "720b14bb86924f26582e95ebbab971fa"
-SHEETY_PROJECT_DIR = "flightDeals/prices"
-SHEETY_API_ENDPOINT = f"https://api.sheety.co/{SHEETY_USERID}/{SHEETY_PROJECT_DIR}"
+STRAPI_API_KEY = os.environ["STRAPI_API_KEY"]
+STRAPI_URL_ENDPOINT = f"http://192.168.0.35:1337/api/flight-datas"
+STRAPI_HEADERS = {
+    "Authorization": f"Bearer {STRAPI_API_KEY}",
+    "Content-Type": "application/json"
+}
 
-TEQUILA_FLIGHT_SEARCH_API_KEY = 0  # os.environ["TEQUILA_FLIGHT_SEARCH_API_KEY"]
-
+TEQUILA_FLIGHT_SEARCH_API_KEY = os.environ["TEQUILA_FLIGHT_SEARCH_API_KEY"]
+TEQUILA_ENDPOINT = "https://api.tequila.kiwi.com"
+TEQUILA_HEADERS = {
+    "Content-Type": "application/json",
+    "apikey": TEQUILA_FLIGHT_SEARCH_API_KEY
+}

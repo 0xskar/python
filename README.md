@@ -2,6 +2,10 @@
 
 Collection of my python scripts from newest to oldest
 
+### Flight Deal Finder (100 days 39-40)
+
+Set up Strapi API on an ubuntu VM. This program connect with strapi to collect the locations of places you would like to visit with how much you will be willing for looking to spend on a flight. It will then connect to Kiwi's Tequila API to check and see if there are flights available for lower than your set price. If there are the program can be setup to either email or SMS you. Unfortunately most email and SMS software costs money now, so for now it just prints a message. I have setup SMTP servers on my home PC but they are unable to send emails outside of the network.
+
 ### Sheety/OpenAI Workout Tracker (100 days 38)
 
 Uses Nutritionx to generate a json response with a user inputted sentence (EG: "I went for a walk for 2 kilometers it took 15 minutes"), then uses nutritionx openAI connection to calculate calories burned. With this json information it updates your sheety connected google sheet for easy tracking.
