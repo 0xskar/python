@@ -36,7 +36,8 @@ class FlightSearch:
             "fly_to": flight_data['attributes']['iatacode'],
             "dateFrom": tomorrow,
             "dateTo": six_months,
+            "curr": "CAD"
         }
         r = requests.get(url=f"{TEQUILA_ENDPOINT}/search", headers=self.headers, params=params)
         data = r.json()["data"][0]
-        return data['price']
+        return data['price'], data['deep_link']
