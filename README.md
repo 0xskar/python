@@ -1,4 +1,4 @@
-# PYTHON
+# PYTHON Projects
 
 Collection of my python scripts from newest to oldest
 

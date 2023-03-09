@@ -1,5 +1,6 @@
 class FlightSearch:
 
-    def flightsearch(self, iatacode):
-        print(iatacode)
-        return f"Testing"
+    def flightsearch(self, city):
+        """Search through KIWI API with City and return IATI Code"""
+        # TODO THis
+        return f"TESTING"
