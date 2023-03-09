@@ -45,7 +45,7 @@ nutritionix_result = r.json()
 print(nutritionix_result)
 
 sheety_headers = {
-    "Authorization": "Bearer WaBL7Aon56UzQwHbltmZ"
+    "Authorization": f"Bearer {SHEETY_BEARER_TOKEN}"
 }
 
 # Getting Rows - return all records in out sheet
