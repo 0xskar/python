@@ -2,9 +2,12 @@ from data_manager import DataManager
 from flight_search import FlightSearch
 from globals import *
 
-# This file will need to use the DataManager, FlightSearch, FlightData, NotificationManager classes to achieve the program requirements.
+city_insert = input("Enter a new city to check: ")
+city_price = input("Enter the new cities wanted price: ")
 
 data_manager = DataManager()
+data_manager.data_create(city=city_insert, lowprice=city_price)
+
 flight_search = FlightSearch()
 
 sheet_data = data_manager.data_check()

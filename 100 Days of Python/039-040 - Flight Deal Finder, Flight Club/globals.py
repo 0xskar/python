@@ -1,7 +1,7 @@
 import os
 
 # YOUR LOCAL AIRPORT OR WHERE FLYING FROM
-LOCAL_IATACODE = "YKA"
+LOCAL_IATACODE = input("Enter IATA Code where you're flying from (EG: YLW): ").upper()
 
 # REQUIRED APIs
 STRAPI_API_KEY = os.environ["STRAPI_API_KEY"]

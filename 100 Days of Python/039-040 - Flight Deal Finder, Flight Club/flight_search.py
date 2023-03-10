@@ -2,6 +2,7 @@ import requests
 from globals import *
 from datetime import datetime, timedelta
 
+
 class FlightSearch:
     def __init__(self):
         self.headers = TEQUILA_HEADERS

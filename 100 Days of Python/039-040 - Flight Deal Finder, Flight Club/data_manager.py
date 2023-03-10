@@ -28,3 +28,16 @@ class DataManager:
             }
             url = f"{STRAPI_URL_ENDPOINT}/{city['id']}"
             r = requests.put(url=url, headers=self.auth_header, json=params)
+
+    def data_create(self, city, lowprice):
+        params = {
+            "data": {
+                "city": city,
+                "iatacode": "",
+                "lowestprice": lowprice
+            }
+        }
+        url = f"{STRAPI_URL_ENDPOINT}"
+        r = requests.post(url=url, headers=self.auth_header, json=params)
+
+
