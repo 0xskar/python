@@ -2,6 +2,10 @@
 
 Collection of my python scripts from newest to oldest
 
+### ycombinator news scraper
+
+Sorts the news section on ycombinator from highest to lowest scores instead of using its algorithm for easy reading
+
 ### Flight Deal Finder (100 days 39-40)
 
 Communicates with a [Strapi](https://strapi.io/) instance that I installed on an ubuntu VM. This program connect with Strapi to collect the locations of places you would like to visit and how much you will be willing for looking to spend on a flight. It will then connect to Kiwi's Tequila API to check and see if there are flights available for lower than your set price. If there are the program can be setup to either email or SMS you. Unfortunately most email and SMS software costs money now, so for now it just prints a message. I have setup SMTP servers on my home PC but they are unable to send emails outside of the network.
