@@ -2,6 +2,12 @@
 
 Collection of my python scripts from newest to oldest
 
+### top100 movies scraper/reverse
+
+takes the top 100 movies from empire then reverses the list and saves it to a file.
+
+![movie scraper](assets/top-100-movie-scraper.png)
+
 ### ycombinator news scraper
 
 Sorts the news section on ycombinator from highest to lowest scores instead of using its algorithm for easy reading
