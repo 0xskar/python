@@ -77,7 +77,7 @@ class Scrapi:
             current_price = float(item['attributes']['current_price'])
             item_name = item['attributes']['name']
             item_url = item['attributes']['url']
-            if current_price <= target_price:
+            if current_price < target_price:
                 print(f"Sending email...\n"
-                      f"{item_name} is lower then {target_price} @ {current_price}\n"
-                      f"=======================================")
+                      f"{item_name} is lower then {target_price} @ {current_price}\n{item_url}\n"
+                      f"=======================================\n")
