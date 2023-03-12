@@ -2,6 +2,14 @@
 
 Collection of my python scripts from newest to oldest
 
+### Top100 Billboard Spotify Playlist Creator
+
+Scrapes billboard top 100s using Beautiful Soup from any year entered, then using Spotipy and the spotify API connects to spotify to get the unique Spotify URI for the artist/song then uses the URI to create and modify a playlist and title with the songs collected.
+
+![billboard scraper](assets/billboardscraper01.png)
+
+![billboard scraper](assets/billboardscraper02.png)
+
 ### top100 movies scraper/reverse
 
 takes the top 100 movies from empire then reverses the list and saves it to a file.
