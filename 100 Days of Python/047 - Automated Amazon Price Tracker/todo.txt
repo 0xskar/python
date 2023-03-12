@@ -1,0 +1,7 @@
+# AMAZON PRICE TRACKER
+# TODO-2 - Add the Title, URL, Price of item into Scrapi, and wanted price
+# TODO-3 - Check Item list in Scrapi and send an email if the price is below the wanted price
+
+items
+https://www.amazon.ca/Lenovo-ThinkPad-1920x1080-Thunderbolt-Professional/dp/B086TV4475/ref=sr_1_8?crid=2YJSPPX5U5F02&keywords=laptops&qid=1678608174&sprefix=laptop%2Caps%2C152&sr=8-8&th=1
+https://www.amazon.ca/Bitdefender-Total-Security-Subscription-Activation/dp/B07XPGZ7DF?ref_=Oct_d_omwf_d_3318461_0&pd_rd_w=OBAIK&content-id=amzn1.sym.1dd15c99-95b0-4ea5-8749-96ac70aa66a9&pf_rd_p=1dd15c99-95b0-4ea5-8749-96ac70aa66a9&pf_rd_r=99A5Q5SXX10YNQ9NTQYG&pd_rd_wg=Txe61&pd_rd_r=6ad4168f-f479-4f5d-b902-aa00d82adcfe&pd_rd_i=B07XPGZ7DF

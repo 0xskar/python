@@ -2,6 +2,25 @@
 
 Collection of my python scripts from newest to oldest
 
+### Amazon Price Scraper/Low Price Messager
+
+This program will take an amazon URL, and use beautifulsoup to collect information such as current available price its name, the price you want to be notified at, and connect to my Strapi API to hold the information. 
+
+![Price Scraper Tracking New Item](assets/amazon_price_scraper01.png)
+
+You can list all of the items you are currently tracking:
+
+![Price Scraper List all items](assets/amazon_price_scraper02.png)
+
+Check amazon to see if there are updated prices, then update all prices in the database:
+
+![Price Scraper update item prices](assets/amazon_price_scraper03.png)
+
+And finally, run a price scan, out an an email if there are any deals.
+
+![Price scraper price scan](assets/amazon_price_scraper04.png)
+
+
 ### Top100 Billboard Spotify Playlist Creator
 
 Scrapes billboard top 100s using Beautiful Soup from any year entered, then using Spotipy and the spotify API connects to spotify to get the unique Spotify URI for the artist/song then uses the URI to create and modify a playlist and title with the songs collected.
