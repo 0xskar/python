@@ -9,7 +9,7 @@ d = webdriver.Firefox(service=FirefoxService(GeckoDriverManager().install()))
 d.get("http://orteil.dashnet.org/experiments/cookie/")
 
 timeout = time.time() + 5
-five_min = time.time() + 60*5  # 5minutes
+print(timeout)
 
 playing = True
 while playing:
@@ -26,6 +26,7 @@ while playing:
     cursor = d.find_element(By.ID, "buyCursor")
 
     # MONEY AND COST VARIABLES
+    cps = int(d.find_element(By.ID, "cps").text.split(":")[1].replace(",", ""))
     total_cookies = int(d.find_element(By.ID, "money").text.replace(",", ""))
     cost_cursor = int(d.find_element(By.ID, "buyCursor").find_element(By.TAG_NAME, "b").text.strip("Cursor - ").replace(",", ""))
     cost_grandma = int(d.find_element(By.ID, "buyGrandma").find_element(By.TAG_NAME, "b").text.strip("Grandma - ").replace(",", ""))
@@ -36,24 +37,5 @@ while playing:
     cost_portal = int(d.find_element(By.ID, "buyPortal").find_element(By.TAG_NAME, "b").text.strip("Portal - ").replace(",", ""))
     cost_time_machine = int(d.find_element(By.ID, "buyTime machine").find_element(By.TAG_NAME, "b").text.strip("Time machine - ").replace(",", ""))
 
-    cookie.click()
-
     #Every 5 seconds:
-    if time.time() > timeout:
-        if total_cookies > cost_time_machine:
-            time_machine.click()
-        elif total_cookies > cost_portal:
-            portal.click()
-        elif total_cookies > cost_lab:
-            lab.click()
-        elif total_cookies > cost_shipment:
-            shipment.click()
-        elif total_cookies > cost_mine:
-            mine.click()
-        elif total_cookies > cost_factory:
-            factory.click()
-        elif total_cookies > cost_grandma:
-            grandma.click()
-        elif total_cookies > cost_cursor:
-            cursor.click()
 

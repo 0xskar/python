@@ -2,6 +2,18 @@
 
 Collection of my python scripts from newest to oldest
 
+### Zillow Home Price Data Collector
+
+Takes a Location from zillow, then using beautiful soup finds how many pages of results there are. Then cycles through the pages of results and collects all of the wanted house information and outputs it in json.
+
+![Scraping Zillow Information](assets/zillow01.png)
+
+After the information is collected we can run selenium to enter all collected information from the data.json info google forms.
+
+![Information Entered Through Selenium](assets/zillow02.png)
+
+With the collected information we can then see we will never be able to afford the average home where we live :D
+
 ### Amazon Price Scraper/Low Price Messager
 
 This program will take an amazon URL, and use beautifulsoup to collect information such as current available price its name, the price you want to be notified at, and connect to my Strapi API to hold the information. 

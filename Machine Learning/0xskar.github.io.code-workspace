@@ -1,0 +1,14 @@
+{
+	"folders": [
+		{
+			"name": "0xskar.github.io",
+			"path": "../../../0xskar.github.io"
+		},
+		{
+			"path": ".."
+		}
+	],
+	"settings": {
+		"liveServer.settings.multiRootWorkspaceName": "0xskar.github.io"
+	}
+}
