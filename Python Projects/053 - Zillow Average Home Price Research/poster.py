@@ -5,12 +5,10 @@ from selenium.webdriver.common.by import By
 import json
 import time
 
-data = "data.json"
-
 
 class FormPoster:
     def __init__(self, form_data):
-        self.FORM_URL = "https://docs.google.com/forms/d/e/1FAIpQLSfwa6dHnxR_F9E2M0dMKq3J7S-tIn50tIMUWQ3EA4jvb7yWJA/viewform"
+        self.FORM_URL = input("Paste a google form link: ")
         self.d = webdriver.Firefox(service=FirefoxService(GeckoDriverManager().install()))
         self.housing_data = []
         with open(form_data, mode="r") as file:
@@ -41,7 +39,3 @@ class FormPoster:
         footage_input.send_keys(footage)
         price_input.send_keys(price)
         submit_button.click()
-
-
-
-form_poster = FormPoster(data)
