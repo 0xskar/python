@@ -1215,8 +1215,9 @@ console.warn: LoginRecipes: "Falling back to a synchronous message for: https://
 console.warn: LoginRecipes: "Falling back to a synchronous message for: https://docs.google.com."
 console.warn: LoginRecipes: "Falling back to a synchronous message for: https://docs.google.com."
 console.warn: LoginRecipes: "Falling back to a synchronous message for: https://docs.google.com."
-1678773670126	geckodriver	INFO	Listening on 127.0.0.1:59083
-1678773673517	mozrunner::runner	INFO	Running command: "C:\\Program Files\\Mozilla Firefox\\firefox.exe" "--marionette" "--remote-debugging-port" "59084" "--remote-allow-hosts" "localhost" "-no-remote" "-profile" "C:\\Users\\Errol\\AppData\\Local\\Temp\\rust_mozprofilebiI6h3"
+1678776276223	Marionette	INFO	Stopped listening on port 54402
+Dynamically enable window occlusion 1
+ng command: "C:\\Program Files\\Mozilla Firefox\\firefox.exe" "--marionette" "--remote-debugging-port" "59084" "--remote-allow-hosts" "localhost" "-no-remote" "-profile" "C:\\Users\\Errol\\AppData\\Local\\Temp\\rust_mozprofilebiI6h3"
 console.warn: services.settings: Ignoring preference override of remote settings server
 console.warn: services.settings: Allow by setting MOZ_REMOTE_SETTINGS_DEVTOOLS=1 in the environment
 1678773674159	Marionette	INFO	Marionette enabled
@@ -1756,3 +1757,5 @@ console.warn: LoginRecipes: "Falling back to a synchronous message for: https://
 console.warn: LoginRecipes: "Falling back to a synchronous message for: https://docs.google.com."
 console.warn: LoginRecipes: "Falling back to a synchronous message for: https://docs.google.com."
 console.warn: LoginRecipes: "Falling back to a synchronous message for: https://docs.google.com."
+1678776275042	Marionette	INFO	Stopped listening on port 59091
+Dynamically enable window occlusion 1
