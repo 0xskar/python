@@ -6,13 +6,13 @@ Collection of my python scripts from newest to oldest
 
 With my markdown files converted I setup a flask app that loads the most recent 25 posts from my Strapi CMS via its API. It's pretty much a fully functional blog site for now, but the markdown isn't displayed correctly, will fix that with a later update when I am making a final version to display all of my everythings on it.
 
-![Flask Bootstrap testing blog](bootstrap-blog-01.png)
+![Flask Bootstrap testing blog](assets/bootstrap-blog-01.png)
 
 ## Jekyll Markdown Data Migration - 58
 
 I needed blog posts for a Flask app I am working on so I created a script to handle the migration of my jekyll markdown files to my Strapi CMS I have setup. 
 
-![Eww files](/assets/data-migrator3.png)
+![Eww files](assets/data-migrator3.png)
 
 Uses frontmatter to extract the information from the markdown files on my PC, such as all of the tags and categories, then handles the posting of the information to Strapi. This way I can populate my new blog. I'm working on setting up user authentication so I can make the flask app into a frontend for that connects to the Strapi API.
 
