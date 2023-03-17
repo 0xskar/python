@@ -22,16 +22,16 @@ print(r.status_code)
 data = r.json()['data']
 blog_posts = []
 for post in data:
+    p_id = post['id']
     title = post['attributes']['title']
     tags = post['attributes']['tags']
     categories = post['attributes']['categories']
     content = post['attributes']['content']
-    blog_posts.append(Posts(title, tags, categories, content))
+    blog_posts.append(Posts(p_id, title, tags, categories, content))
 
 
 @app.route("/")
 def index():
-    print(blog_posts)
     return render_template("index.html", posts=blog_posts)
 
 
@@ -40,9 +40,17 @@ def about():
     return render_template("about.html")
 
 
-@app.route("/post.html")
-def post():
-    return render_template("post.html")
+@app.route("/post/<int:post_id>")
+def post(post_id):
+    print(post_id)
+    for post in blog_posts:
+        if post.id == post_id:
+            title = post.title
+            content = post.content
+            tags = post.tags
+            categories = post.categories
+
+    return render_template("post.html", title=title, content=content, tags=tags, categories=categories)
 
 
 @app.route("/contact.html")

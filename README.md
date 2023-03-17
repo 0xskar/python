@@ -2,7 +2,13 @@
 
 Collection of my python scripts from newest to oldest
 
-## Jekyll Markdown Data Migration
+## Strapi Blog Project - 59
+
+With my markdown files converted I setup a flask app that loads the most recent 25 posts from my Strapi CMS via its API. It's pretty much a fully functional blog site for now, but the markdown isn't displayed correctly, will fix that with a later update when I am making a final version to display all of my everythings on it.
+
+![Flask Bootstrap testing blog](bootstrap-blog-01.png)
+
+## Jekyll Markdown Data Migration - 58
 
 I needed blog posts for a Flask app I am working on so I created a script to handle the migration of my jekyll markdown files to my Strapi CMS I have setup. 
 
@@ -14,7 +20,7 @@ Uses frontmatter to extract the information from the markdown files on my PC, su
 
 ![Data Migrator tags](assets/data-migrator2.png)
 
-## Zillower Home Price Data Collector
+## Zillower Home Price Data Collector - 53
 
 Zillow stores its home information by latitude/longditude, so we can enter in coordinated lat/long of where you want your home prices. So we start the program by asking for the user to input desired filename for data storage locally as well as the desired coordinates:
 
@@ -34,7 +40,7 @@ We can then create a new google spreadsheet and manipulate the data further howe
 
 Pretty cool project to complete really good practice.
 
-## Amazon Price Scraper/Low Price Messager
+## Amazon Price Scraper/Low Price Messager - 47
 
 This program will take an amazon URL, and use beautifulsoup to collect information such as current available price its name, the price you want to be notified at, and connect to my Strapi API to hold the information. 
 
