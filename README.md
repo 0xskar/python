@@ -2,7 +2,19 @@
 
 Collection of my python scripts from newest to oldest
 
-## Zillower Home Price Data Collector - 053
+## Jekyll Markdown Data Migration
+
+I needed blog posts for a Flask app I am working on so I created a script to handle the migration of my jekyll markdown files to my Strapi CMS I have setup. 
+
+![Eww files](/assets/data-migrator3.png)
+
+Uses frontmatter to extract the information from the markdown files on my PC, such as all of the tags and categories, then handles the posting of the information to Strapi. This way I can populate my new blog. I'm working on setting up user authentication so I can make the flask app into a frontend for that connects to the Strapi API.
+
+![Data Migrator](assets/data-migrator.png)
+
+![Data Migrator tags](assets/data-migrator2.png)
+
+## Zillower Home Price Data Collector
 
 Zillow stores its home information by latitude/longditude, so we can enter in coordinated lat/long of where you want your home prices. So we start the program by asking for the user to input desired filename for data storage locally as well as the desired coordinates:
 

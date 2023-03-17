@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta content="text/html; charset=UTF-8" http-equiv="content-type">
+  <title>Errol Vogt</title>
+  <link href="/static/style.css" rel="stylesheet" />
+</head>
+<body>
+<div id="main-container">
+
+    <!-- Begin -->
+    <div id="header-container">
+    /home/blog : zsh - Console
+    </div>
+
+    <!-- Section -->
+    <div class="body-container">
+
+    {% for post in posts: %}
+        <h1>{{ post.title }}</h1>
+        <p>{{ post.description }}</p>
+        <a href="{{ url_for('show_post', index=post.id) }}">Read post</a>
+    {% endfor %}
+
+    </div>
+
+    <!-- Footer -->
+    <div id="footer-container">
+        {{ footer_copyright }}
+    </div>
+</div>
+<script src="http://ajax.googleapis.com/ajax/libs/jquery/1/jquery.min.js"></script>
+</body>
+</html>

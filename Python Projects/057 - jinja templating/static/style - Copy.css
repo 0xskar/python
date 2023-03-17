@@ -1,0 +1,140 @@
+/* MAIN/COMMON STYLES
+
+	background color: 	#181D21
+	border colors:		#EFD01B
+	font-colors:		#78868E
+
+   Imports:
+
+*/
+
+@import url('https://fonts.googleapis.com/css2?family=Sono&display=swap');
+
+/* ELEMENT SELECTORS */
+
+body {
+	background-color: #181D21;
+	color: #78868E;
+	font-family: 'Sono', sans-serif;
+	margin-top: 50px;
+	margin-bottom: 50px;
+}
+
+/* CLASS SELECTORS */
+
+.body-container {
+	margin: 20px;
+	padding-left: 20px;
+	padding-right: 20px;
+	border-width: 1px;
+	border-color: #8a7412;
+	border-style: solid;
+	border-radius: 3px;
+	background-color: #13161A;
+}
+
+.headline img {
+	float: left;
+	padding-right: 30px;
+}
+
+.skills table {
+	margin: auto;
+	width: 100%;
+}
+
+.thm-badge {
+	float:right;
+}
+
+.bottom-margin-10px {
+	margin-bottom: 40px
+}
+
+.section-header {
+	text-align: center;
+	margin-top: 20px;
+}
+
+/* CSS ID SELECTORS */
+
+#main-container {
+    width: 80%;
+    margin: 0 auto;
+    border-width: 1px; /* top, right, bottom, left */
+    border-style: solid;
+    border-color: #8A7412;
+    border-radius: 3px;
+    background-color: #0F1214;
+}
+
+#header-container {
+	display: flex;
+}
+
+#footer-container {
+	text-align: center;
+	margin-bottom: 20px;
+}
+
+#location {
+
+}
+
+.form {
+	width: 100%;
+	margin: 50px;
+}
+
+.form .left-col {
+	text-align: right;
+	width: 300px;
+	vertical-align: top;
+}
+
+.form .right-col {
+
+}
+
+#name {
+	background-color: #181D21;
+	color: #78868E;
+	font-size: 13pt;
+	border: 1px solid #8a7412;
+	border-radius: 3px;
+}
+
+#email {
+	background-color: #181D21;
+	color: #78868E;
+	font-size: 13pt;
+	border: 1px solid #8a7412;
+	border-radius: 3px;
+}
+
+#subject {
+	width: 400px;
+	background-color: #181D21;
+	color: #78868E;
+	font-size: 13pt;
+	border: 1px solid #8a7412;
+	border-radius: 3px;
+}
+
+#message {
+	width: 400px;
+	background-color: #181D21;
+	color: #78868E;
+	font-size: 13pt;
+	border: 1px solid #8a7412;
+	border-radius: 3px;
+}
+
+#submit {
+	width: 400px;
+	background-color: #181D21;
+	color: #78868E;
+	font-size: 13pt;
+	border: 1px solid #8a7412;
+	border-radius: 3px;
+}
