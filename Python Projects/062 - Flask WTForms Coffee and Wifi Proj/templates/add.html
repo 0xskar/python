@@ -1,0 +1,81 @@
+{% extends 'bootstrap/base.html' %}
+
+{% block title %}Add A New Cafe{% endblock %}
+
+{% block content %}
+<div class="container">
+  <div class="row">
+    <div class="col-sm-12 col-md-8">
+        {% if success %}
+            <h1>Successfully added...</h1>
+        {% endif %}
+      <h1>Add a new cafe into the database</h1>
+
+      <div class="container">
+        <div class="row justify-content-center">
+          <div class="col-lg-6 col-md-8 col-sm-10">
+            <form action="{{ url_for('add_cafe') }}" method="post" novalidate>
+              {{ form.csrf_token }}
+              <div class="form-group">
+                <label for="{{ form.cafe.id }}">{{ form.cafe.label }}</label>
+                {{ form.cafe(class="form-control") }}
+                 {% for err in form.cafe.errors %}
+                  <span style="color:red">{{ err }}</span>
+                 {% endfor %}
+              </div>
+              <div class="form-group">
+                <label for="{{ form.url_location.id }}">{{ form.url_location.label }}</label>
+                {{ form.url_location(class="form-control") }}
+                 {% for err in form.url_location.errors %}
+                  <span style="color:red">{{ err }}</span>
+                 {% endfor %}
+              </div>
+              <div class="form-group">
+                <label for="{{ form.open_time.id }}">{{ form.open_time.label }}</label>
+                {{ form.open_time(class="form-control") }}
+                 {% for err in form.open_time.errors %}
+                  <span style="color:red">{{ err }}</span>
+                 {% endfor %}
+              </div>
+              <div class="form-group">
+                <label for="{{ form.close_time.id }}">{{ form.close_time.label }}</label>
+                {{ form.close_time(class="form-control") }}
+                 {% for err in form.close_time.errors %}
+                  <span style="color:red">{{ err }}</span>
+                 {% endfor %}
+              </div>
+              <div class="form-group">
+                <label for="{{ form.coffee_rating.id }}">{{ form.coffee_rating.label }}</label>
+                {{ form.coffee_rating(class="form-control") }}
+                 {% for err in form.coffee_rating.errors %}
+                  <span style="color:red">{{ err }}</span>
+                 {% endfor %}
+              </div>
+              <div class="form-group">
+                <label for="{{ form.wifi_rating.id }}">{{ form.wifi_rating.label }}</label>
+                {{ form.wifi_rating(class="form-control") }}
+                 {% for err in form.wifi_rating.errors %}
+                  <span style="color:red">{{ err }}</span>
+                 {% endfor %}
+              </div>
+              <div class="form-group">
+                <label for="{{ form.power_rating.id }}">{{ form.power_rating.label }}</label>
+                {{ form.power_rating(class="form-control") }}
+                 {% for err in form.power_rating.errors %}
+                  <span style="color:red">{{ err }}</span>
+                 {% endfor %}
+              </div>
+              {{ form.submit }}
+            </form>
+          </div>
+        </div>
+      </div>
+
+      <br><br><br>
+      <p class="space-above"><a href="{{ url_for('cafes') }}">See all cafes</a></p>
+
+    </div>
+  </div>
+</div>
+
+{% endblock %}

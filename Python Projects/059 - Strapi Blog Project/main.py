@@ -1,7 +1,7 @@
 import os
 
 import requests
-from flask import Flask, render_template
+from flask import Flask, render_template, request
 from strapistuff import Posts
 
 app = Flask(__name__)
@@ -53,9 +53,19 @@ def post(post_id):
     return render_template("post.html", title=title, content=content, tags=tags, categories=categories)
 
 
-@app.route("/contact.html")
+@app.route("/contact.html", methods=["GET", "POST"])
 def contact():
-    return render_template("contact.html")
+    if request.method == "POST":
+        print(request.form['name'])
+        print(request.form['email'])
+        print(request.form['phone'])
+        print(request.form['message'])
+        message = "Successfully Sent Your Message"
+        return render_template("contact.html", message=message)
+    elif request.method == "GET":
+        print("GET")
+        message = "Contact Me"
+        return render_template("contact.html", message=message)
 
 
 if __name__ == "__main__":

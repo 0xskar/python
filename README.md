@@ -2,6 +2,24 @@
 
 Collection of my python scripts from newest to oldest
 
+## Coffee Shop Collection - 62
+
+Simple web app writted in python with flask templating and WTForms for inputs and validation.
+
+![Coffee shop](assets/coffee01.png)
+
+You can view list of all cafes added.
+
+![Coffee shop see shops](assets/coffee02.png)
+
+You can add new shops, and the form uses validation on all inputs.
+
+![Coffee Shop Validation](assets/coffee03.png)
+
+And check the newly added shops:
+
+![new shops coffee shop](assets/coffee04.png)
+
 ## Strapi Blog Project - 59
 
 With my markdown files converted I setup a flask app that loads the most recent 25 posts from my Strapi CMS via its API. It's pretty much a fully functional blog site for now, but the markdown isn't displayed correctly, will fix that with a later update when I am making a final version to display all of my everythings on it.
