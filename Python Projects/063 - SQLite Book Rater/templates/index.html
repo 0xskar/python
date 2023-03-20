@@ -1,0 +1,24 @@
+{% extends 'bootstrap/base.html' %}
+
+{% block title %}Library Home{% endblock %}
+
+{% block content %}
+
+<div class="container-fluid dark">
+<h1>My Library</h1>
+
+
+{% if books == [] %}
+    <ul>
+        <li>The Library is empty, <a href="{{ url_for('add') }}">add a new book!</a></li>
+    </ul>
+{% else %}
+    <ul>
+        {% for book in books %}
+        <li>{{ book['attributes']['title'] }} - {{ book['attributes']['author'] }} - Rating {{ book['attributes']['rating'] }}/10</li>
+        {% endfor %}
+    </ul>
+{% endif %}
+<a href="{{ url_for('add') }}">Add New Book</a>
+</div>
+{% endblock %}

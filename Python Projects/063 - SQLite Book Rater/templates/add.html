@@ -1,0 +1,46 @@
+{% extends 'bootstrap/base.html' %}
+
+{% block title %}Add a book{% endblock %}
+
+{% block content %}
+
+      <div class="container">
+        <div class="row justify-content-center">
+          <div class="col-lg-6 col-md-8 col-sm-10">
+            <form action="{{ url_for('add') }}" method="post" novalidate>
+              {{ form.csrf_token }}
+              <div class="form-group">
+                <label for="{{ form.book_name.id }}">{{ form.book_name.label }}</label>
+                {{ form.book_name(class="form-control") }}
+                 {% for err in form.book_name.errors %}
+                  <span style="color:red">{{ err }}</span>
+                 {% endfor %}
+              </div>
+              <div class="form-group">
+                <label for="{{ form.book_author.id }}">{{ form.book_author.label }}</label>
+                {{ form.book_author(class="form-control") }}
+                 {% for err in form.book_author.errors %}
+                  <span style="color:red">{{ err }}</span>
+                 {% endfor %}
+              </div>
+              <div class="form-group">
+                <label for="{{ form.book_rating.id }}">{{ form.book_rating.label }}</label>
+                {{ form.book_rating(class="form-control") }}
+                 {% for err in form.book_rating.errors %}
+                  <span style="color:red">{{ err }}</span>
+                 {% endfor %}
+              </div>
+              {{ form.submit }}
+            </form>
+          </div>
+        </div>
+          <br>
+<a href="{{ url_for('home') }}">Home</a>
+      </div>
+
+
+
+
+
+
+{% endblock %}

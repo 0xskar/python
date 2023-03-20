@@ -2,6 +2,21 @@
 
 Collection of my python scripts from newest to oldest
 
+## My Top 10 Movies - 64
+
+A personal top 10 movie collector. Using Flask and wtforms and strapi. The data is pulled from strapi's db via api, then sorted from highest rating to lowest. You can edit/delete/add new movies through the app. The site also uses lots of form validation and CSRF protection.
+
+![My top 10 movies Index](assets/toptenmovies01.png)
+
+Editing a movies rating/review:
+
+![Edit a movie](assets/toptenmovies02.png)
+
+Deleting/Adding a movie
+
+![Assing/deleting](assets/toptenmovies03.png)
+
+
 ## Coffee Shop Collection - 62
 
 Simple web app writted in python with flask templating and WTForms for inputs and validation.
