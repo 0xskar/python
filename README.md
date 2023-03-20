@@ -2,9 +2,29 @@
 
 Collection of my python scripts from newest to oldest
 
+## RESTful API - 066 
+
+Created a RESTful API for a mock up coffee shop location database from scratch using Flask, and SQLAlchemy. Complete with full documentation provided by PostMan. If the database cannot find information or wrong information is inputted the API will handle these request effectively with the appropriate responses.
+
+Using GET requests you can search for specific or all information in the database:
+
+![GET Requests](assets/REST_coffee_api01.png)
+
+Can add new cafes to the database.
+
+![POST Requests](assets/REST_coffee_api02.png)
+
+Patch information such as coffee prices, because inflation.
+
+![POST Requests](assets/REST_coffee_api03.png)
+
+And we can delete cafes that have closed down.
+
+![DELETE Requests](assets/REST_coffee_api04.png)
+
 ## My Top 10 Movies - 64
 
-A personal top 10 movie collector. Using Flask and wtforms and strapi. The data is pulled from strapi's db via api, then sorted from highest rating to lowest. You can edit/delete/add new movies through the app. The site also uses lots of form validation and CSRF protection.
+A personal top 10 movie collector. Using Flask and wtforms and strapi. The data is pulled from strapi's db via api, then sorted from highest rating to lowest. You can edit/delete/add new movies through the app. The site uses lots of form validation and CSRF protection.
 
 ![My top 10 movies Index](assets/toptenmovies01.png)
 
