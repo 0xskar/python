@@ -2,6 +2,26 @@
 
 Collection of my python scripts from newest to oldest
 
+## Flask CMS - Starting - 067
+
+Functional blog built with Flask and SQLAlchemy where you are able to get, post, delete and edit blog posts. Currently has no authentications but will work on that later.
+
+Adding a new post:
+
+![Adding Post](assets/blog01.png)
+
+![post on homepage](assets/blog02.png)
+
+Editing A post:
+
+![Editing a post](assets/blog03.png)
+
+![Editing a post](assets/blog04.png)
+
+and Deleting a post is easy as hitting delete on the homepage:
+
+![Deleted post](assets/blog05.png)
+
 ## RESTful API - 066 
 
 Created a RESTful API for a mock up coffee shop location database from scratch using Flask, and SQLAlchemy. Complete with full documentation provided by PostMan. If the database cannot find information or wrong information is inputted the API will handle these request effectively with the appropriate responses.

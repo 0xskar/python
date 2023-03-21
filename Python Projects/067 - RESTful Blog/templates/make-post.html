@@ -1,0 +1,75 @@
+{% extends 'bootstrap/base.html' %}
+
+{% block content %}
+{% include "header.html" %}
+  <!-- Page Header -->
+
+  <header class="masthead" style="background-image: url('{{ url_for('static', filename='img/edit-bg.jpg')}}')">
+    <div class="overlay"></div>
+    <div class="container">
+      <div class="row">
+        <div class="col-lg-8 col-md-10 mx-auto">
+          <div class="page-heading">
+            <h1>New Post</h1>
+            <span class="subheading">You're going to make a great blog post!</span>
+          </div>
+        </div>
+      </div>
+    </div>
+  </header>
+
+  <div class="container">
+    <div class="row justify-content-center">
+            <div class="row justify-content-center">
+
+                <form method="post" novalidate>
+                  {{ form.hidden_tag() }}
+                  <div class="form-group">
+                    <label for="{{ form.title.id }}">{{ form.title.label }}</label>
+                    {{ form.title(class="form-control") }}
+                    {% for error in form.title.errors %}
+                      <span style="color:red">{{ error }}</span>
+                    {% endfor %}
+                  </div>
+                  <div class="form-group">
+                    <label for="{{ form.subtitle.id }}">{{ form.subtitle.label }}</label>
+                    {{ form.subtitle(class="form-control") }}
+                    {% for error in form.subtitle.errors %}
+                      <span style="color:red">{{ error }}</span>
+                    {% endfor %}
+                  </div>
+                  <div class="form-group">
+                    <label for="{{ form.author.id }}">{{ form.author.label }}</label>
+                    {{ form.author(class="form-control") }}
+                    {% for error in form.author.errors %}
+                      <span style="color:red">{{ error }}</span>
+                    {% endfor %}
+                  </div>
+                  <div class="form-group">
+                    <label for="{{ form.img_url.id }}">{{ form.img_url.label }}</label>
+                    {{ form.img_url(class="form-control") }}
+                    {% for error in form.img_url.errors %}
+                      <span style="color:red">{{ error }}</span>
+                    {% endfor %}
+                  </div>
+                  <div class="form-group">
+                    <label for="{{ form.body.id }}">{{ form.body.label }}</label>
+                     {{ form.body() }}
+                     {{ ckeditor.load() }}
+                     {{ ckeditor.config(name='body') }}
+                    {% for error in form.body.errors %}
+                      <span style="color:red">{{ error }}</span>
+                    {% endfor %}
+                  </div>
+                  <div class="form-group">
+                    {{ form.submit(class="btn btn-primary") }}
+                  </div>
+                </form>
+
+            </div>
+
+    </div>
+  </div>
+
+{% include "footer.html" %}
+{% endblock %}
