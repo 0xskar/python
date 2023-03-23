@@ -2,6 +2,14 @@
 
 Collection of my python scripts from newest to oldest
 
+## Blog with posts / comments / multi user authentication - 069
+
+It's a basic blog made in flask with comments/posts and authentication. You can visit the repo [here](https://github.com/0xskar/Blog-with-Auth) to check it out.
+
+![logging in](assets/authenticated_blog-logged-in.png)
+
+![authentication](assets/authenticated_blog-register.png)
+
 ## Flask Authentication - 068 
 
 Flask Authorization complete, using best industry standards as not saving plaintext passwords as variables and encrypting them for storage with werkzeug.security.
