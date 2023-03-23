@@ -2,6 +2,22 @@
 
 Collection of my python scripts from newest to oldest
 
+## Flask Authentication - 068 
+
+Flask Authorization complete, using best industry standards as not saving plaintext passwords as variables and encrypting them for storage with werkzeug.security.
+
+Login feature with flashed messages:
+
+![Flask Authentication](assets/flask01.png)
+
+![Flask Authentication](assets/flask02.png)
+
+The login feature uses Flasks login_user to remain logged in after user crediants are validation, which sets a session cookie containing the user's ID. Also using Werkzeug's security module to verify the user's salted passwords. 😃 
+
+![Flask Authentication](assets/flask03.png)
+
+![Flask Authentication](assets/flask04.png)
+
 ## Flask CMS - Starting - 067
 
 Functional blog built with Flask and SQLAlchemy where you are able to get, post, delete and edit blog posts. Currently has no authentications but will work on that later.
