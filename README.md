@@ -2,6 +2,12 @@
 
 Collection of my python scripts from newest to oldest
 
+## pandas/matplotlib Stackoverflow Programming Language Over Time Usage
+
+Time series analysis and plotting of the programming languages over time on Stackoverflow, and visualizing the trends. Using pandas/matplotlib.
+
+![stackoverflow usage over time](assets/programming_language_over_time.png)
+
 ## Blog with posts / comments / multi user authentication - 069
 
 It's a basic blog made in flask with comments/posts and authentication. You can visit the repo [here](https://github.com/0xskar/Blog-with-Auth) to check it out.
