@@ -2,6 +2,16 @@
 
 Collection of my python scripts from newest to oldest
 
+## Watermark Wizard
+
+![Wiz Upload](assets/watermarkwiz01.png)
+
+A flask application that uses Pillow to watermark images
+
+![Wiz watermarked](assets/watermarkwiz02.png)
+
+View repo [here](https://github.com/0xskar/Watermark-Wizard).
+
 ## ISS Tracker/User Tracker
 
 ![iss tracker](assets/iss-tracker01.png)
