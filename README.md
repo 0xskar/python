@@ -2,6 +2,12 @@
 
 Collection of my python scripts from newest to oldest
 
+## tkTyper
+
+A simple typing speedtest in tkinter. Uses API to get random paragraphs then calculates your WPM.
+
+![tktyper](assets/tktyper.png)
+
 ## Watermark Wizard
 
 ![Wiz Upload](assets/watermarkwiz01.png)
